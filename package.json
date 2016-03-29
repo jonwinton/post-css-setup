@@ -1,0 +1,39 @@
+{
+  "name": "post-css-setup",
+  "version": "0.0.1",
+  "description": "A place to store some plugins/customization for PostCSS builds",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./build-tools/bin/build-styles.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonwinton/post-css-setup.git"
+  },
+  "keywords": [
+    "PostCSS"
+  ],
+  "author": "Jon Winton",
+  "license": "None",
+  "bugs": {
+    "url": "https://github.com/jonwinton/post-css-setup/issues"
+  },
+  "homepage": "https://github.com/jonwinton/post-css-setup",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "6.3.3",
+    "css-loader": "0.23.1",
+    "gulp": "3.9.1",
+    "gulp-postcss": "6.1.0",
+    "postcss": "5.0.19",
+    "postcss-cli-simple": "1.0.1",
+    "postcss-loader": "0.8.2",
+    "postcss-map": "0.8.0",
+    "postcss-scss": "0.1.7",
+    "postcss-simple-vars": "1.2.0",
+    "precss": "1.4.0",
+    "style-loader": "0.13.1",
+    "webpack": "1.12.14"
+  }
+}

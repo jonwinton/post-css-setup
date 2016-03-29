@@ -1,0 +1,12 @@
+@import './test';
+
+$blue: blue;
+
+.womp {
+    background: $blue;
+    display: flex;
+    appearance: none;
+    color: map(colors, red);
+    content: map(colors, test);
+    @map fonts regular;
+}
