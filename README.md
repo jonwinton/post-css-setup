@@ -5,9 +5,9 @@ The purpose of this repo is to test out running a CSS build process using Gulp, 
 ## TL;DR
 To build projects:
 
-    1. `$ npm i`
-    2. Choose Webpack (`$ npm run pack`) or Gulp (`$ npm run gulp`)
-    3. Files build to the `dist/` directory
+1. `$ npm i`
+2. Choose Webpack (`$ npm run pack`) or Gulp (`$ npm run gulp`)
+3. Files build to the `dist/` directory
 
 PostCSS plugin configs can be found in `styles/config`, but I'd move those somewhere else for your own project.
 
@@ -18,16 +18,16 @@ Take CSS files from the `styles/` directory and compile them such that they can 
 
 ## Current Setup
 
-    - Gulp
-        - Variables using `postcss-map`
-        - Imports/SCSS features using `precss`
-        - Autoprefixer
+* Gulp
+    * Variables using `postcss-map`
+    * Imports/SCSS features using `precss`
+    * Autoprefixer
 
-    -Webpack
-        - Variables using `postcss-map`
-        - Imports/SCSS features using `precss`
-        - Autoprefixer
-        - Webpack builds standalone CSS file using ExtractTextPlugin
+*Webpack
+    * Variables using `postcss-map`
+    * Imports/SCSS features using `precss`
+    * Autoprefixer
+    * Webpack builds standalone CSS file using ExtractTextPlugin
 
 
 ## Caution
