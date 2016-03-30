@@ -23,7 +23,7 @@ Take CSS files from the `styles/` directory and compile them such that they can 
     * Imports/SCSS features using `precss`
     * Autoprefixer
 
-*Webpack
+* Webpack
     * Variables using `postcss-map`
     * Imports/SCSS features using `precss`
     * Autoprefixer
