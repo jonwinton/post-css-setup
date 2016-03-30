@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./build-tools/bin/build-styles.sh",
-    "gulp": "cd build-tools/gulp; gulp css;",
-    "pack": "cd build-tools/webpack; webpack;"
+    "clean": "rm -rf ./dist",
+    "gulp": "npm run clean; cd build-tools/gulp; gulp css;",
+    "pack": "npm run clean; cd build-tools/webpack; webpack;"
   },
   "repository": {
     "type": "git",
