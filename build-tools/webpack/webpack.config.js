@@ -1,4 +1,6 @@
 var webpack      = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 var precss       = require('precss');
 var autoprefixer = require('autoprefixer');
 var map          = require('postcss-map');
@@ -29,10 +31,13 @@ module.exports = {
         loaders: [
             {
                 test:   /\.css$/,
-                loader: 'style-loader!css-loader!postcss-loader'
+                loader: ExtractTextPlugin.extract('style-loader', '!css-loader!postcss-loader')
             }
         ]
     },
+    plugins: [
+        new ExtractTextPlugin('style.css')
+    ],
     postcss: function () {
         return [map(opts),precss, autoprefixer];
     }
