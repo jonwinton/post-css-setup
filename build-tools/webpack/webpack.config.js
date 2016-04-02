@@ -4,6 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var precss       = require('precss');
 var autoprefixer = require('autoprefixer');
 var map          = require('postcss-map');
+var pxtorem = require('postcss-pxtorem');
 
 
 var path = require('path');
@@ -13,6 +14,7 @@ var cssDir = path.resolve(rootDir + '/styles/');
 var outputDir = path.resolve(rootDir + '/dist/');
 var configDir = path.resolve(cssDir + '/config/');
 var configVariables = require(configDir);
+var pxToRemConfig = require(cssDir + '/config/pxtorem');
 
 
 // Maps options
@@ -39,6 +41,6 @@ module.exports = {
         new ExtractTextPlugin('style.css')
     ],
     postcss: function () {
-        return [map(opts),precss, autoprefixer];
+        return [map(opts),precss, autoprefixer, pxtorem(pxToRemConfig)];
     }
 }
